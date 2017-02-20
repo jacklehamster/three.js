@@ -21157,7 +21157,7 @@
 
 					_currentGeometryProgram = '';
 
-	                renderObjectImmediate (object, program, material);
+	            	renderObjectImmediate (object, program, material);
 
 				} else {
 
