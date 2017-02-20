@@ -1489,7 +1489,7 @@ function WebGLRenderer( parameters ) {
 
 				_currentGeometryProgram = '';
 
-                renderObjectImmediate (object, program, material);
+            	renderObjectImmediate (object, program, material);
 
 			} else {
 
