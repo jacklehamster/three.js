@@ -1489,7 +1489,11 @@ function WebGLRenderer( parameters ) {
 
 				_currentGeometryProgram = '';
 
-				renderObjectImmediate (object, program, material);
+				object.render( function ( object ) {
+
+					_this.renderBufferImmediate( object, program, material );
+
+				} );
 
 			} else {
 
@@ -1502,12 +1506,6 @@ function WebGLRenderer( parameters ) {
 
 		}
 
-	}
-
-	function renderObjectImmediate(object, program, material) {
-		object.render( function ( object ) {
-			_this.renderBufferImmediate( object, program, material );
-		} );
 	}
 
 	function initMaterial( material, fog, object ) {
